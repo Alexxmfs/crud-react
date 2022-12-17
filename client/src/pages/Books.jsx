@@ -16,25 +16,35 @@ const Books = () => {
         }
     }
     fecthAllBooks()
-  }, [])
+  }, []);
+
+  const handleDelete = async (id)=>{
+    try{
+      await axios.delete("http://localhost:8800/books/"+id)
+      window.location.reload()
+    }catch(err){  
+      console.log(err);
+    }
+  }
+
     return (
     <div>
       <h1>Alex Shopping</h1>
       <div className="books">
         {books.map(book=>(
-            <div classNames="book" key={book.id}>
+            <div className="book" key={book.id}>
                 {book.cover && <img src={book.cover} alt="" />}
                 <h2>{book.title}</h2>
                 <p>{book.desc}</p>
-                <span>{book.price}</span>
-                <button className="delete">Delete</button>
+                <span>${book.price}</span>
+                <button className="delete" onClick={()=>handleDelete(book.id)}>Delete</button>
                 <button className="update">Update</button>
             </div>
         ))}
       </div>
       <button><Link to="/add">Add new book</Link></button>
     </div>
-  )
+  );
 }
 
 export default Books
