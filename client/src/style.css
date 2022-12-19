@@ -76,13 +76,29 @@ img{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #FFF;
 }
 
 input{
     width: 250px;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid gray;
+    color: #FFF;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e8e9eb;
+    opacity: 1; /* Firefox */
+  }
 
 .formButton{
     border: none;
@@ -91,6 +107,7 @@ input{
     color: white;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .iconTrash {
@@ -119,4 +136,20 @@ input{
     font-size: 1rem;
     border-radius: 5px;
     padding: 5px 18px;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 425px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
