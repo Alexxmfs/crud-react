@@ -6,10 +6,17 @@
     justify-content: center;
     text-align: center;
 }
-
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2471711.jpg");
+    background-size: cover;
+    margin: 0;
+    color: #FFF;
+}
 .books{
     display: flex;
     gap: 10px;
+    color: 'red';
+    margin: 25px;
 }
 
 .book{
@@ -18,6 +25,15 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    /* color: #035afc;
+    background-color: #035afc; */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
 }
 
 img{
@@ -25,24 +41,35 @@ img{
     height: 300px;
     object-fit: cover;
     background-color: rgb(203, 238, 227);
+    /* border: 1px solid #035afc; */
 }
 
 .delete{
+    font-size: 1rem;
     border: none;
-    padding: 3px 6px;
-    background-color: white;
+    padding: 3px 24px;
+    border-radius: 5px;
     cursor:  pointer;
     border: 1px solid rgb(245, 191, 191);
-    color: rgb(242, 100, 100);
+    background-color:rgb(242, 100, 100);
+    color: #FFF;
+    overflow: hidden;
+    vertical-align: middle;
     }
 
 .update{
+    font-size: 1rem;
     border: none;
-    padding: 3px 6px;
-    background-color: white;
+    padding: 3px 18px;
+    border-radius: 5px;
+    /* background-color: rgb(139, 139, 234); */
+    background-color: #516ff5;
     cursor:  pointer;
     border: 1px solid rgb(204, 204, 243);
     color: rgb(139, 139, 234);
+    overflow: hidden;
+    vertical-align: middle;
+    text-decoration: none;
 }
 
 .form {
@@ -64,4 +91,32 @@ input{
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+.iconTrash {
+    align-items: 'center';
+    justify-content: 'center';
+    overflow: hidden;
+    vertical-align: middle;
+    padding-right: 2px;
+}
+
+.iconPencil {
+    align-items: 'center';
+    justify-content: 'center';
+    overflow: hidden;
+    vertical-align: middle;
+    padding-right: 2px;
+}
+
+.styleLink{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.buttonAdd{
+    background-color: #F48E4A;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 18px;
 }
